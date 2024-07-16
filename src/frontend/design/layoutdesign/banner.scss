@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela&display=swap");
+
+@mixin font-popular {
+  font-family: "Varela", sans-serif;
+}
+
+
+
+#homebanner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+
+  .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .overlay_banner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); // Overlay yang meredupkan video
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+
+    .homebanner_container {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 6rem;
+      @include font-popular();
+      font-weight: 600;
+    }
+    h3 {
+      width: 700px;
+      @include font-popular();
+    }
+
+    .btn_join {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      button {
+        padding: 10px 30px;
+        text-transform: uppercase;
+        border-radius: 8px;
+        font-size: 17px;
+        font-weight: 500;
+        margin-top: 3%;
+        color: #ffffff80;
+        text-shadow: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 10;
+        border: 1px solid #ffffff80;
+        transition: 0.5s ease;
+        user-select: none;
+
+        &:hover {
+          background-color: #e69900;
+          color: #ffffff;
+          border: 1px solid #e4c021;
+          text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+          box-shadow: 0 0 5px #e69900, 0 0 20px #e69900, 0 0 50px #e69900, 0 0 100px #e69900;
+        }
+
+        &:focus {
+          outline: none;
+          color: #ffffff;
+          background: #e69900;
+          border: 1px solid #e69900;
+          text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+          box-shadow: 0 0 5px #e69900, 0 0 20px #e69900, 0 0 50px #e69900, 0 0 100px #e69900;
+        }
+      }
+    }
+  }
+}

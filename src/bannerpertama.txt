@@ -1,0 +1,63 @@
+import React from "react";
+import "../../../design/layoutdesign/banner.scss";
+import { Heading, Text } from "@chakra-ui/react";
+import { _bannerImage } from "../../../data/bannerdata";
+
+export const LandpageBanner = () => {
+  return (
+    <>
+      <div id="homebanner" className="video">
+        <div className="overlay_banner">
+          <video autoPlay loop muted className="video-bg">
+            <source src="src/videos/video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="homebanner_container">
+            <h1>
+              Empower your<br /> Fitness Journey
+            </h1>
+            <h3>{_bannerImage.txt_assist}</h3>
+            <div className="btn_join">
+              <button>Join Member</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+// NAVBAR 
+
+import '../../design/layoutdesign/navbar.scss';
+import React from 'react';
+
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="logo">STARGYM</div>
+      <ul className="menu">
+        <li className="menu-item">
+          <a href="#">SERVICES</a>
+        </li>
+        <li className="menu-item">
+          <a href="#">TRAINING</a>
+        </li>
+        <li className="menu-item">
+          <a href="#">CLASS</a>
+        </li>
+        <li className="menu-item">
+          <a href="#">SHOP</a>
+        </li>
+        <li className="menu-item">
+          <a href="#">CONTACT US</a>
+        </li>
+      </ul>
+      <div className="join-button">
+        <a href="#" className="button">
+          GET STARTED
+        </a>
+      </div>
+    </nav>
+  );
+};

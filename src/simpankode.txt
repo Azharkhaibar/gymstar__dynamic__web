@@ -1,0 +1,128 @@
+export const GymClass = () => {
+  return (
+    <>
+      <section id="gprogram">
+        <div className="gprogram__heading">
+          <h4>Our Programs</h4>
+          <h2>Build your best body</h2>
+        </div>
+        <div className="gprogram__container">
+          <div className="gprogram__card">
+            <div className="program__item">
+              <img src={Programs.img__one} alt="none" />
+              <h3>Flex Muscle</h3>
+              <p>{Programs.desc__one}</p>
+              <h4>{Programs.ButtonHold}</h4>
+            </div>
+          </div>
+          <div className="gprogram__card">
+            <div className="program__item">
+              <img src={Programs.img__two} alt="none" />
+              <h3>Yoga Basic</h3>
+              <p>{Programs.desc__two}</p>
+              <h4>{Programs.ButtonHold}</h4>
+            </div>
+          </div>
+          <div className="gprogram__card">
+            <div className="program__item">
+              <img src={Programs.img__three} alt="none" />
+              <h3>Lift weighting</h3>
+              <p>{Programs.desc__three}</p>
+              <h4>{Programs.ButtonHold}</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+};
+
+// SCSS 
+
+@import "../layoutdesign/banner.scss";
+
+#gprogram {
+  width: 100%;
+  height: 110vh;
+  background: linear-gradient(to left, rgb(0, 0, 0) 0%, rgb(15, 15, 15) 100%);
+
+  .gprogram__heading {
+    display: flex;
+    padding-top: 6%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      font-size: 25px;
+      color: white;
+      @include font-popular;
+    }
+    h2 {
+      font-size: 4rem;
+      font-weight: 700;
+      color: white;
+      @include font-popular;
+    }
+  }
+  .gprogram__container {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 3%;
+    .gprogram__card {
+      width: 400px;
+      box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgba(221, 175, 22, 0.075);
+      padding: 25px;
+      min-height: 600px;
+      border: 2px solid rgba(255, 166, 0, 0.295);
+      border-radius: 15px;
+      .program__item {
+        display: flex;
+        flex-direction: column;
+        img {
+          width: 500px;
+          height: auto;
+        }
+        h3 {
+          font-size: 35px;
+          color: white;
+          padding-top: 2%;
+          @include font-popular;
+        }
+        p {
+          font-size: 18px;
+          color: white;
+          padding-top: 2%;
+          font-weight: 400;
+        }
+        h4 {
+          padding-left: 33px;
+          padding-right: 33px;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          margin-top: 4%;
+          width: 150px;
+          color: white;
+          border-radius: 30px;
+          background: linear-gradient(to left, rgb(243, 140, 22) 0%, rgb(44, 41, 3) 100%);
+          border: none;
+          font-family: inherit;
+          text-align: center;
+          cursor: pointer;
+          transition: 0.4s;
+
+          &:hover {
+            box-shadow: 7px 5px 56px -14px #c3d900;
+          }
+
+          &:active {
+            transform: scale(0.97);
+            box-shadow: 7px 5px 56px -10px #c3d900;
+          }
+        }
+      }
+    }
+  }
+}

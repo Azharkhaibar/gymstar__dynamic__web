@@ -1,0 +1,30 @@
+import React from "react";
+import { DataTesti } from "../../data/datatesti";
+import { Box, Flex, Heading, Text, Button, Image, Card, CardBody, CardFooter } from "@chakra-ui/react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export class Testimonial extends React.Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1800,
+      speed: 2000,
+      cssEase: "linear",
+    };
+
+    return (
+      <Box w="100%" h="100vh" bgColor="#151515">
+        <Flex display="flex" justifyItems="center" flexDirection="column" alignItems="center" pt="6%" color="white">
+          <Heading>MEMBERS' TESTIMONIALS</Heading>
+          <Text>See what our members are saying about us.</Text>
+        </Flex>
+      </Box>
+    );
+  }
+}
